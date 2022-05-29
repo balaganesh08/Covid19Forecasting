@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Covid-19</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  ::placeholder {
+    color:rgb(70, 70, 94);
+    opacity:2; /* Firefox */
+    font-weight: bold;
+  }
+  body{
+    overflow-y : auto;
+    
+  }
+  </style>
+  
+</head>
+<body>
+<div class="wrapper">
+  <div class="top-bar fix">
+    <div class="top-bar-links">
+      
+<div class="socialmedia">
+<ul>
+<li><a style="color: rgb(226, 26, 26);" href="/home">Home</a></li>
+<li><a style="color: rgb(68, 64, 64);" href="/dd">Virus Description</a></li>
+<li><a style="color: rgb(26, 24, 24);" href="/maps">Maps</a></li>
+<li><a style="color: rgb(70, 63, 63);" href="/visual">Visulization </a></li>
+<li><a style="color: rgb(70, 63, 63);" href="/prediction">Prediction </a></li>
+<li><a style="color: rgb(20, 19, 19);"  href="/about">About us</a></li>
+<a href="https://www.facebook.com" class="fa fa-facebook"></a>
+<a href="https://twitter.com" class="fa fa-twitter"></a>
+<a href="https://www.instagram.com" class="fa fa-instagram"></a>
+</ul>
+  </div>
+  <div class="image">
+   
+    <img style="width: 1500px;" src="../static/images/title.png" />
+    </div>
+
+
+   </div>      
+
+</div>
+
+ <div class="header-login">
+	<h1>Future Forecasting of Covid-19</h1>
+
+  <div class="w3-content w3-section" style="max-width:1200px" style="max-height:800px">
+    <center><img class="mySlides" src="../static/images/predict.png" style="width:1200px" style="max-height:1200px"></center>
+    <center><img class="mySlides" src="../static/images/predict1.png" style="width:1200px" style="max-height:1200px"></center>
+
+
+</div>
+<script>
+	var myIndex = 0;
+	carousel();
+	
+	function carousel() {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	  }
+	  myIndex++;
+	  if (myIndex > x.length) {myIndex = 1}
+	  x[myIndex-1].style.display = "block";
+	  setTimeout(carousel, 3000); // Change image every 3 seconds
+	}
+	</script>
+</body>
+</html>
